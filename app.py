@@ -8,6 +8,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html');
 
+@app.route('/login',methods=["GET","POST"])
+def facebook():
+    return render_template('facebook.html')
+
 
 @app.route('/get_users',methods=["GET"])
 def get_users():
